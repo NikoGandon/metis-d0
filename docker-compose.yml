@@ -1,0 +1,15 @@
+services:
+  metis-api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      # Par défaut : mode replay hors réseau (0 USD, aucune clé API requise)
+      METIS_CASSETTE: replay
+      METIS_CASSETTE_DIR: /app/tests/fixtures/cassettes
+      # --- Option : inférence locale gratuite via Ollama sur l'hôte ---
+      # METIS_CASSETTE: live
+      # METIS_LLM_BASE_URL: http://host.docker.internal:11434/v1/chat/completions
+      # METIS_MODEL_JUDGE: ollama/qwen2.5:7b
+      # extra_hosts:
+      #   - "host.docker.internal:host-gateway"

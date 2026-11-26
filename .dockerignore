@@ -1,0 +1,13 @@
+.git
+.github
+.venv
+.mypy_cache
+.pytest_cache
+.hypothesis
+__pycache__
+*.pyc
+.DS_Store
+local/
+runs/
+evals/runs/
+evals/cassettes/

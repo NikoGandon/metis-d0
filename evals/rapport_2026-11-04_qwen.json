@@ -1,0 +1,632 @@
+{
+  "date": "2026-11-04",
+  "refus_fournisseur": {
+    "qwen/qwen3.8-max-0902": {
+      "par_role": {
+        "auditeur": {
+          "refus": 0,
+          "total": 60,
+          "taux": 0.0
+        }
+      },
+      "par_sujet": {
+        "sujets_sensibles": {
+          "refus": 0,
+          "total": 14,
+          "taux": 0.0
+        },
+        "autres_sujets": {
+          "refus": 0,
+          "total": 27,
+          "taux": 0.0
+        }
+      }
+    }
+  },
+  "lexiques_version": "3",
+  "textclean_version": "2",
+  "nb_cas": 64,
+  "recalcul_depuis_cassettes": false,
+  "nb_cas_sujet_sensible": 25,
+  "nb_cas_ambigus": 3,
+  "cas_valides_par_humain": 0,
+  "par_juge": {
+    "qwen/qwen3.8-max-0902": {
+      "interruption_budget": "run qwen_qwen3_8-max-0902 : 0.8858 USD dépensés + 0.0280 USD possibles > budget 0.90 USD",
+      "non_evalues": [],
+      "nb_cas_evalues": 41,
+      "nb_cas_mesures": 41,
+      "cas_ambigus": [],
+      "taux_faux_established": 0.0,
+      "alerte_faux_established": false,
+      "taux_faux_rejets": 0.875,
+      "taux_faux_rejets_prefiltre": 0.0,
+      "taux_fausses_confirmed_contradicteur": null,
+      "alerte_aucune_confirmed": false,
+      "taux_vraies_refutations_manquees": null,
+      "exactitude_globale": 0.7560975609756098,
+      "nb_cas_refuses": 0,
+      "nb_correct_par_refus": 0,
+      "exactitude_hors_refus": 0.7560975609756098,
+      "taux_faux_rejets_hors_refus": 0.875,
+      "cout_total_usd": 0.885802,
+      "nb_appels_llm": 60,
+      "resultats": [
+        {
+          "cas_id": "g001",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g002",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g003",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: mice",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g004",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: marmoset, monkeys",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g005",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : espece_et_modele, mesurande, population, intervention] : La citation décrit un effet expérimental de la rapamycine pendant l’immunisation contre une infection létale, sans preuve chez l’humain âgé ni mesure de la réponse anticorps vaccinale demandée.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g006",
+          "type": "claim",
+          "categorie": "in_vitro",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: in vitro",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g007",
+          "type": "claim",
+          "categorie": "in_vitro",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : espece_et_modele, mesurande, population, intervention] : Il s’agit d’un test in vitro de sensibilité à des immunosuppresseurs, non d’une étude chez l’humain âgé évaluant l’effet d’un inhibiteur de mTOR sur la réponse anticorps au vaccin antigrippal.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g008",
+          "type": "claim",
+          "categorie": "negation_fenetre",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g009",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g010",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g011",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g012",
+          "type": "claim",
+          "categorie": "speculation",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "CLAIMED_UNPROVEN"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g013",
+          "type": "claim",
+          "categorie": "protocole_sans_resultat",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "CLAIMED_UNPROVEN"
+          ],
+          "obtenu": "CLAIMED_UNPROVEN",
+          "motif": "contexte 0 [non conformes : temporalite_et_statut_de_preuve] : Le contexte décrit un essai visant à évaluer l’efficacité du sirolimus, sans résultat observé au passé.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g014",
+          "type": "claim",
+          "categorie": "protocole_sans_resultat",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g015",
+          "type": "claim",
+          "categorie": "protocole_sans_resultat",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "CLAIMED_UNPROVEN"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g016",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g017",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g018",
+          "type": "claim",
+          "categorie": "population_voisine",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : population, intervention] : Le résultat porte sur des adolescents atteints de diabète de type 1, alors que la question concerne des adultes atteints de diabète de type 2.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g019",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: mice",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g020",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: mice",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g021",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: mice",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g022",
+          "type": "claim",
+          "categorie": "in_vitro",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: mouse",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g023",
+          "type": "claim",
+          "categorie": "in_vitro",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g024",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g025",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g026",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande, intervention] : La citation concerne l’effet du moment de prise de la metformine sur la glycémie postprandiale, et non un effet de la metformine sur l’HbA1c.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g027",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande] : La citation rapporte une réduction du risque d’événements cliniques liés au diabète, alors que la question porte sur la baisse de l’HbA1c.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g028",
+          "type": "claim",
+          "categorie": "intervention_voisine",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g029",
+          "type": "claim",
+          "categorie": "protocole_sans_resultat",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "CLAIMED_UNPROVEN"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g030",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g031",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g032",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : espece_et_modele, mesurande, population, intervention] : Ce résultat porte sur la guérison osseuse chez un modèle de rate ovariectomisée sous 1,25(OH)2D3, et non sur l’incidence des fractures chez des femmes très âgées recevant vitamine D3 800 UI/j plus calcium.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g033",
+          "type": "claim",
+          "categorie": "in_vitro",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : espece_et_modele, mesurande, population, intervention] : Étude in vitro sur la différenciation d'ostéoblastes humains, sans population clinique de femmes très âgées en résidence, sans calcium comparé à un placebo et sans incidence des fractures.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g034",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g035",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande, population, intervention] : La citation décrit seulement des concentrations sériques après 1600 ou 3200 UI/j de vitamine D3 chez une population vieillissante mixte, sans mesurer l’incidence des fractures ni tester 800 UI/j plus calcium chez des femmes très âgées institutionnalisées.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g036",
+          "type": "claim",
+          "categorie": "population_voisine",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : population, intervention] : L'essai porte sur des adultes d'âge moyen ou plus âgés recevant 2000 UI/j de vitamine D3 seule, sans calcium, et non sur des femmes très âgées vivant en résidence recevant 800 UI/j de vitamine D3 associée à du calcium.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g037",
+          "type": "claim",
+          "categorie": "population_voisine",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g038",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g039",
+          "type": "claim",
+          "categorie": "negation_fenetre",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "juge_sortie_invalide",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g040",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "ESTABLISHED",
+          "motif": "contexte 0 [non conformes : aucun] : L’essai randomisé chez adultes de 65 ans et plus rapporte une efficacité relative chiffrée de 24,2 % du vaccin antigrippal inactivé haute dose contre la dose standard pour prévenir la grippe confirmée en laboratoire.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g041",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: mice",
+          "correct": true,
+          "refus_fournisseur": false
+        }
+      ]
+    }
+  }
+}

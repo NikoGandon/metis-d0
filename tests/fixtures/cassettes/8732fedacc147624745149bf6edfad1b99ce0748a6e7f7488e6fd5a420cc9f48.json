@@ -1,0 +1,64 @@
+{
+  "cle": "8732fedacc147624745149bf6edfad1b99ce0748a6e7f7488e6fd5a420cc9f48",
+  "date_enregistrement": "2026-11-04T00:59:35.743567Z",
+  "fournisseur": "Claude Platform on AWS",
+  "latency_ms": 1901.2059589986166,
+  "messages": [
+    {
+      "content": "Tu es l'extracteur d'un audit documentaire scientifique fail-closed.\n\nOn te donne une sous-question de recherche et UN document (identifié par son source_id).\nTu dois relever les passages du document qui répondent directement à la sous-question.\n\nRègles impératives :\n1. Chaque citation_verbatim est un passage CONTIGU copié caractère pour caractère depuis\n   le document : pas de reformulation, pas de traduction, pas de coupe interne, pas de\n   fusion de deux phrases éloignées. Au moins 40 caractères.\n2. source_id est recopié exactement tel qu'il est donné.\n3. Ne relève que des passages pertinents pour la sous-question, l'espèce cible, la\n   population et le mesurande ; n'invente rien. S'il n'y a rien de pertinent, renvoie des listes vides.\n4. N'écarte pas un passage parce qu'il te semble faible : d'autres étapes le jugeront.\n5. equations : seulement si le document contient une équation mécaniste explicite liée\n   au mesurande. citation_equation recopie l'équation ET le texte qui l'entoure\n   immédiatement (au moins 40 caractères, contigu, verbatim). observable_nom et\n   observable_unite décrivent la grandeur calculée par l'équation ; laisse-les vides si\n   le texte ne permet pas de les établir.\n",
+      "role": "system"
+    },
+    {
+      "content": "QuestionD0 :\n{\n  \"question_id\": \"vitd-fractures-cycle\",\n  \"sous_question\": \"Chez l'adulte de 65 ans et plus, une supplémentation en vitamine D3 associée au calcium, contre placebo, réduit-elle l'incidence des fractures ?\",\n  \"espece_cible\": \"human_in_vivo\",\n  \"population\": \"adultes de 65 ans et plus, hommes et femmes, vivant à domicile ou en institution\",\n  \"intervention\": \"vitamine D3 orale quotidienne (environ 700 à 800 UI/j) associée au calcium (0,5 à 1,2 g/j), contre placebo\",\n  \"mesurande\": {\n    \"nom\": \"incidence des fractures (hanche, non vertébrales, toutes fractures)\",\n    \"unite\": \"rapport de risques\"\n  },\n  \"exclusions\": [\n    \"ostéoporose secondaire\",\n    \"enfants et adolescents\"\n  ],\n  \"requetes_initiales\": {\n    \"pubmed\": [\n      \"vitamin D3 calcium hip fractures elderly women randomized\"\n    ],\n    \"arxiv\": []\n  }\n}\n\nDocument — source_id : pmid:36705288\n<<<DEBUT\n[TITRE] Calcium and vitamin D for increasing bone mineral density in premenopausal women.\n\n[RÉSUMÉ]\n\nBACKGROUND: Osteoporosis is a condition where bones become fragile due to low bone density and impaired bone quality. This results in fractures that lead to higher morbidity and reduced quality of life. Osteoporosis is considered a major public health concern worldwide. For this reason, preventive measurements need to be addressed throughout the life course. Exercise and a healthy diet are among the lifestyle factors that can help prevent the disease, the latter including intake of key micronutrients for bone, such as calcium and vitamin D. The evidence on whether supplementation with calcium and vitamin D improves bone mineral density (BMD) in premenopausal women is still inconclusive. In this age group, bone accrual is considered to be the goal of supplementation, so BMD is relevant for the future stages of life.\n\nOBJECTIVES: To evaluate the benefits and harms of calcium and vitamin D supplementation, alone or in combination, to increase the BMD, reduce fractures, and report the potential adverse events in healthy premenopausal women compared to placebo.\n\nSEARCH METHODS: We used standard, extensive Cochrane search methods. The latest search was 12 April 2022.\n\nSELECTION CRITERIA: We included randomised controlled trials in healthy premenopausal women (with or without calcium or vitamin D deficiency) comparing supplementation of calcium or vitamin D (or both) at any dose and by any route of administration versus placebo for at least three months. Vitamin D could have been administered as cholecalciferol (vitamin D3) or ergocalciferol (vitamin D2).\n\nDATA COLLECTION AND ANALYSIS: We used standard Cochrane methods. Outcomes included total hip bone mineral density (BMD), lumbar spine BMD, quality of life, new symptomatic vertebral fractures, new symptomatic non-vertebral fractures, withdrawals due to adverse events, serious adverse events, all reported adverse events and additional withdrawals for any reason.\n\nMAIN RESULTS: We included seven RCTs with 941 participants, of whom 138 were randomised to calcium supplementation, 110 to vitamin D supplementation, 271 to vitamin D plus calcium supplementation, and 422 to placebo. Mean age ranged from 18.1 to 42.1 years. Studies reported results for total hip or lumbar spine BMD (or both) and withdrawals for various reasons, but none reported fractures or withdrawals for adverse events or serious adverse events. Results for the reported outcomes are presented for the three comparisons: calcium versus placebo, vitamin D versus placebo, and calcium plus vitamin D versus placebo. In all comparisons, there was no clinical difference in outcomes, and the certainty of the evidence was moderate to low. Most studies were at risk of selection, performance, detection, and reporting biases. Calcium versus placebo Four studies compared calcium versus placebo (138 participants in the calcium group and 123 in the placebo group) with mean ages from 18.0 to 47.3 years. Calcium supplementation may have little to no effect on total hip or lumbar spine BMD after 12 months in three studies and after six months in one study (total hip BMD: mean difference (MD) -0.04 g/cm2, 95% confidence interval (CI) -0.11 to 0.03; I2 = 71%; 3 studies, 174 participants; low-certainty evidence; lumbar spine BMD: MD 0 g/cm2, 95% CI -0.06 to 0.06; I2 = 71%; 4 studies, 202 participants; low-certainty evidence). Calcium alone supplementation does not reduce or increase the withdrawals in the trials (risk ratio (RR) 0.78, 95% CI 0.52 to 1.16; I2 = 0%; 4 studies, 261 participants: moderate-certainty evidence). Vitamin D versus placebo Two studies compared vitamin D versus placebo (110 participants in the vitamin D group and 79 in the placebo group), with mean ages from 18.0 to 32.7 years. These studies reported lumbar spine BMD as a mixture of MDs and percent of change and we were unable to pool the results. In the original studies, there were no differences in lumbar BMD between groups. Vitamin D alone supplementation does not reduce or increase withdrawals for any reason between groups (RR 0.74, 95% CI 0.46 to 1.19; moderate-certainty evidence). Calcium plus vitamin D versus placebo Two studies compared calcium plus vitamin D versus placebo (271 participants in the calcium plus vitamin D group and 270 in the placebo group; 220 participants from Woo 2007 and 50 participants from Islam 2010). The mean age range was 18.0 to 36 years. These studies measured different anatomic areas, one study reported total hip BMD and the other study reported lumbar spine BMD; therefore, data were not pooled for this outcome. The individual studies found no difference between groups in percent of change on total hip BMD (-0.03, 95% CI -0.06 to 0; moderate-certainty evidence), and lumbar spine BMD (MD 0.01, 95% CI -0.01 to 0.03; moderate-certainty evidence). Calcium plus vitamin D supplementation may not reduce or increase withdrawals for any reason (RR 0.82, 95% CI 0.29 to 2.35; I2 = 72%; 2 studies, 541 participants; low-certainty evidence).\n\nAUTHORS' CONCLUSIONS: Our results do not support the isolated or combined use of calcium and vitamin D supplementation in healthy premenopausal women as a public health intervention to improve BMD in the total hip or lumbar spine, and therefore it is unlikely to have a benefit for the prevention of fractures (vertebral and non-vertebral). The evidence found suggests that there is no need for future studies in the general population of premenopausal women; however, studies focused on populations with a predisposition to diseases related to bone metabolism, or with low bone mass or osteoporosis diagnosed BMD would be useful.\nFIN>>>",
+      "role": "user"
+    }
+  ],
+  "modele": "anthropic/claude-opus-5.5",
+  "nom_schema": "SortieExtracteur",
+  "reponse_brute": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\"claims\":[],\"equations\":[]}",
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant"
+        },
+        "native_finish_reason": "end_turn"
+      }
+    ],
+    "created": 1793753973,
+    "id": "gen-1793753973-yke0PxVwIsRSeRMlcT3x",
+    "model": "anthropic/claude-opus-5.5",
+    "object": "chat.completion",
+    "provider": "Claude Platform on AWS",
+    "service_tier": "default",
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 16,
+      "completion_tokens_details": {
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "cost": 0.015104,
+      "cost_details": {
+        "upstream_inference_completions_cost": 0.00032,
+        "upstream_inference_cost": 0.015104,
+        "upstream_inference_prompt_cost": 0.014784
+      },
+      "is_byok": false,
+      "prompt_tokens": 3696,
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "video_tokens": 0
+      },
+      "total_tokens": 3712
+    }
+  }
+}

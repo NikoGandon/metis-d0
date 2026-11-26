@@ -1,0 +1,979 @@
+{
+  "date": "2026-11-04",
+  "refus_fournisseur": {
+    "anthropic/claude-opus-5.5": {
+      "par_role": {
+        "auditeur": {
+          "refus": 13,
+          "total": 56,
+          "taux": 0.23214285714285715
+        }
+      },
+      "par_sujet": {
+        "sujets_sensibles": {
+          "refus": 13,
+          "total": 25,
+          "taux": 0.52
+        },
+        "autres_sujets": {
+          "refus": 0,
+          "total": 39,
+          "taux": 0.0
+        }
+      }
+    }
+  },
+  "lexiques_version": "3",
+  "textclean_version": "2",
+  "nb_cas": 64,
+  "recalcul_depuis_cassettes": false,
+  "nb_cas_sujet_sensible": 25,
+  "nb_cas_ambigus": 3,
+  "cas_valides_par_humain": 0,
+  "par_juge": {
+    "anthropic/claude-opus-5.5": {
+      "interruption_budget": null,
+      "non_evalues": [],
+      "nb_cas_evalues": 64,
+      "nb_cas_mesures": 61,
+      "cas_ambigus": [
+        {
+          "cas_id": "g060",
+          "categorie": "vraie_refutation",
+          "attendus": [
+            "CONFIRMED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC"
+        },
+        {
+          "cas_id": "g061",
+          "categorie": "vraie_refutation",
+          "attendus": [
+            "CONFIRMED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC"
+        },
+        {
+          "cas_id": "g064",
+          "categorie": "vraie_refutation",
+          "attendus": [
+            "CONFIRMED"
+          ],
+          "obtenu": "CONFIRMED"
+        }
+      ],
+      "taux_faux_established": 0.025,
+      "alerte_faux_established": false,
+      "taux_faux_rejets": 0.4,
+      "taux_faux_rejets_prefiltre": 0.0,
+      "taux_fausses_confirmed_contradicteur": 0.0,
+      "alerte_aucune_confirmed": false,
+      "taux_vraies_refutations_manquees": 0.0,
+      "exactitude_globale": 0.9016393442622951,
+      "nb_cas_refuses": 13,
+      "nb_correct_par_refus": 10,
+      "exactitude_hors_refus": 0.9375,
+      "taux_faux_rejets_hors_refus": 0.25,
+      "cout_total_usd": 1.257356,
+      "nb_appels_llm": 56,
+      "resultats": [
+        {
+          "cas_id": "g001",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "refus_fournisseur",
+          "correct": false,
+          "refus_fournisseur": true
+        },
+        {
+          "cas_id": "g002",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "refus_fournisseur",
+          "correct": false,
+          "refus_fournisseur": true
+        },
+        {
+          "cas_id": "g003",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: mice",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g004",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: marmoset, monkeys",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g005",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "refus_fournisseur",
+          "correct": true,
+          "refus_fournisseur": true
+        },
+        {
+          "cas_id": "g006",
+          "type": "claim",
+          "categorie": "in_vitro",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: in vitro",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g007",
+          "type": "claim",
+          "categorie": "in_vitro",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "refus_fournisseur",
+          "correct": true,
+          "refus_fournisseur": true
+        },
+        {
+          "cas_id": "g008",
+          "type": "claim",
+          "categorie": "negation_fenetre",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "refus_fournisseur",
+          "correct": true,
+          "refus_fournisseur": true
+        },
+        {
+          "cas_id": "g009",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "refus_fournisseur",
+          "correct": true,
+          "refus_fournisseur": true
+        },
+        {
+          "cas_id": "g010",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "refus_fournisseur",
+          "correct": true,
+          "refus_fournisseur": true
+        },
+        {
+          "cas_id": "g011",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "refus_fournisseur",
+          "correct": true,
+          "refus_fournisseur": true
+        },
+        {
+          "cas_id": "g012",
+          "type": "claim",
+          "categorie": "speculation",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "CLAIMED_UNPROVEN"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "refus_fournisseur",
+          "correct": false,
+          "refus_fournisseur": true
+        },
+        {
+          "cas_id": "g013",
+          "type": "claim",
+          "categorie": "protocole_sans_resultat",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "CLAIMED_UNPROVEN"
+          ],
+          "obtenu": "CLAIMED_UNPROVEN",
+          "motif": "contexte 0 [non conformes : temporalite_et_statut_de_preuve] : La citation décrit l'objectif d'un protocole d'essai sans résultat chiffré, seul l'axe temporalité est non conforme.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g014",
+          "type": "claim",
+          "categorie": "protocole_sans_resultat",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : temporalite_et_statut_de_preuve, mesurande] : Il s'agit d'un protocole sans résultat dont la citation vise des critères secondaires et non le mesurande IBM-FRS demandé.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g015",
+          "type": "claim",
+          "categorie": "protocole_sans_resultat",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "CLAIMED_UNPROVEN"
+          ],
+          "obtenu": "CLAIMED_UNPROVEN",
+          "motif": "contexte 0 [non conformes : temporalite_et_statut_de_preuve] : La citation est l'enregistrement d'un protocole d'essai sans résultat, seule la temporalité fait défaut.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g016",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "ESTABLISHED",
+          "motif": "contexte 0 [non conformes : aucun] : Baisse chiffrée et significative de l'HbA1c sous metformine chez des adultes atteints de diabète de type 2, observée in vivo.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g017",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "ESTABLISHED",
+          "motif": "contexte 0 [non conformes : aucun] : Résultat chiffré observé chez des adultes diabétiques de type 2 montrant une HbA1c plus basse sous metformine que sous régime conventionnel.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g018",
+          "type": "claim",
+          "categorie": "population_voisine",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : population] : Le résultat concerne des adolescents atteints de diabète de type 1 (exclusion explicite), et non des adultes atteints de diabète de type 2.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g019",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: mice",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g020",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: mice",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g021",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: mice",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g022",
+          "type": "claim",
+          "categorie": "in_vitro",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: mouse",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g023",
+          "type": "claim",
+          "categorie": "in_vitro",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : espece_et_modele, mesurande, population, intervention] : Étude in vitro sur cellules Hep3B mesurant l'accumulation lipidique, sans rapport avec l'HbA1c chez l'adulte diabétique de type 2.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g024",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande, intervention] : La citation rapporte une baisse de la glycémie à jeun et non de l'HbA1c ; le mesurande ne correspond donc pas à celui de la question.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g025",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande] : La citation mesure la néoglucogenèse et l'oxydation du lactate, et non l'HbA1c demandée.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g026",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande, intervention] : La citation compare deux horaires de prise de metformine sur la glycémie postprandiale, et non l'effet de la metformine sur l'HbA1c.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g027",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande] : La citation rapporte une réduction du risque de critères cliniques liés au diabète, et non un effet sur l'HbA1c, qui est le mesurande demandé.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g028",
+          "type": "claim",
+          "categorie": "intervention_voisine",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : intervention] : La citation mesure l'effet de l'olorigliflozine ajoutée à la metformine, et non l'effet de la metformine elle-même sur l'HbA1c.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g029",
+          "type": "claim",
+          "categorie": "protocole_sans_resultat",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "CLAIMED_UNPROVEN"
+          ],
+          "obtenu": "CLAIMED_UNPROVEN",
+          "motif": "contexte 0 [non conformes : temporalite_et_statut_de_preuve] : La citation ne décrit que l'objectif primaire de l'étude, sans résultat observé, alors que les autres axes sont conformes.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g030",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "ESTABLISHED",
+          "motif": "contexte 0 [non conformes : aucun] : Cet essai randomisé contre placebo rapporte une réduction significative et chiffrée des fractures de hanche et non vertébrales sous vitamine D3 800 UI et calcium 1,2 g/j chez des femmes âgées ambulatoires d'environ 84 ans.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g031",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : population] : Le cadre de vie en résidence pour personnes âgées et le critère d'âge de 75 ans et plus ne sont pas vérifiables dans le contexte : l'axe population reste indéterminé, ce qui exclut ESTABLISHED en mode fail-closed.",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g032",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : espece_et_modele, mesurande, population, intervention] : Étude animale chez la rate ovariectomisée portant sur la consolidation du cal de fracture sous calcitriol, hors sujet par rapport à l'incidence des fractures chez la femme âgée sous vitamine D3 et calcium.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g033",
+          "type": "claim",
+          "categorie": "in_vitro",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : espece_et_modele, mesurande, population, intervention] : La citation décrit un effet in vitro de la vitamine D3 sur la différenciation d'ostéoblastes, ce qui est hors sujet par rapport aux fractures chez la femme âgée en résidence.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g034",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande] : La citation rapporte une variation de la densité osseuse fémorale, mesurande voisin mais distinct de l'incidence des fractures demandée.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g035",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande, population, intervention] : La citation mesure la 25(OH)D sérique et non les fractures, dans une population mixte et avec une dose de vitamine D3 sans calcium, différentes de celles de la question.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g036",
+          "type": "claim",
+          "categorie": "population_voisine",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : temporalite_et_statut_de_preuve, population, intervention] : La citation énonce l'objectif d'un essai menée dans une autre population (adultes d'âge moyen et âgés, hommes et femmes, vivant dans la communauté), avec une dose et une intervention différentes (D3 2000 UI/j sans calcium), et ses résultats sont non significatifs.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g037",
+          "type": "claim",
+          "categorie": "population_voisine",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : temporalite_et_statut_de_preuve, mesurande, population, intervention] : La citation est un énoncé d'objectif et ne correspond ni à la population, ni à l'intervention, ni au mesurande demandés ; de plus, la vitamine D3 n'a pas réduit les fractures vertébrales.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g038",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "ESTABLISHED",
+          "motif": "contexte 0 [non conformes : aucun] : Cet essai randomisé rapporte une réduction chiffrée et significative des fractures sous vitamine D3 orale à 100 000 UI tous les 4 mois contre placebo, chez des adultes de 65 à 85 ans vivant à domicile.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g039",
+          "type": "claim",
+          "categorie": "negation_fenetre",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande, population, intervention] : La citation rapporte un effet de l'exercice sur les fractures vertébrales chez des adultes âgés vivant à domicile, ce qui ne correspond ni à l'intervention, ni au mesurande, ni à la population demandés.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g040",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "ESTABLISHED",
+          "motif": "contexte 0 [non conformes : aucun] : Résultat d'essai randomisé observé et chiffré, montrant une efficacité relative de 24,2 % de la haute dose contre la grippe confirmée chez les 65 ans et plus, conforme sur les cinq axes.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g041",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_PREFILTER"
+          ],
+          "obtenu": "REJECTED_PREFILTER",
+          "motif": "espece_exclue_sans_marqueur_humain: mice",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g042",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande] : La citation rapporte un mesurande voisin (réponse anticorps HAI et séroprotection) et non l'efficacité relative contre la grippe confirmée en laboratoire.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g043",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande] : Le mesurande (hospitalisation pour grippe ou pneumonie) diffère de la grippe confirmée en laboratoire et les estimations par sous-groupe sont non significatives.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g044",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande] : La citation sur-interprète les données : l'échec thérapeutique différait significativement entre EVR/CsA et MPA/TAC, si bien que l'équivalence d'efficacité n'est pas établie pour l'ensemble de l'intervention demandée.",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g045",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande] : La citation rapporte un résultat de tolérance infectieuse (CMV/BK), mesurande différent de l'échec thérapeutique demandé.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g046",
+          "type": "claim",
+          "categorie": "mesurande_voisin",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande] : La citation concerne l'évolution du DFGe, un mesurande voisin, et non l'incidence de l'échec thérapeutique demandée.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g047",
+          "type": "claim",
+          "categorie": "vrai_etabli",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "ESTABLISHED"
+          ],
+          "obtenu": "ESTABLISHED",
+          "motif": "contexte 0 [non conformes : aucun] : Dans l'essai RECOVERY, la dexaméthasone 6 mg/j a réduit de façon significative la mortalité à 28 jours chez les adultes hospitalisés sous ventilation mécanique invasive (RR 0,64).",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g048",
+          "type": "claim",
+          "categorie": "population_voisine",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : population] : La citation concerne le sous-groupe sans support respiratoire, hors de la population cible, et y rapporte une absence de bénéfice non significative (IC 0,92 à 1,55), ce qui ne répond pas à la question posée.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g049",
+          "type": "claim",
+          "categorie": "transposition_animale",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "refus_fournisseur",
+          "correct": true,
+          "refus_fournisseur": true
+        },
+        {
+          "cas_id": "g050",
+          "type": "claim",
+          "categorie": "plan_observationnel",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "ESTABLISHED",
+          "motif": "contexte 0 [non conformes : aucun] : In this observational US cohort of postmenopausal women, combined estrogen-progestin use was associated with a significantly lower relative risk of major coronary disease (RR 0.39) compared with non-users; oral route and baseline coronary-free status are implied rather than stated, so this rests on a lenient reading.",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g051",
+          "type": "refutation",
+          "categorie": "fausse_refutation",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "refus_fournisseur",
+          "correct": true,
+          "refus_fournisseur": true
+        },
+        {
+          "cas_id": "g052",
+          "type": "refutation",
+          "categorie": "fausse_refutation",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "refus_fournisseur",
+          "correct": true,
+          "refus_fournisseur": true
+        },
+        {
+          "cas_id": "g053",
+          "type": "refutation",
+          "categorie": "fausse_refutation",
+          "sujet_sensible": true,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "refus_fournisseur",
+          "correct": true,
+          "refus_fournisseur": true
+        },
+        {
+          "cas_id": "g054",
+          "type": "refutation",
+          "categorie": "fausse_refutation",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande, force_de_refutation] : La preuve porte sur la mortalité liée au diabète et non sur l'HbA1c ; elle ne réfute donc pas directement le claim.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g055",
+          "type": "refutation",
+          "categorie": "fausse_refutation",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : population, intervention, force_de_refutation] : La citation porte sur le bras placebo d'un essai chez des adolescents atteints de diabète de type 1, population exclue, et l'étude montre au contraire une baisse de l'HbA1c sous metformine.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g056",
+          "type": "refutation",
+          "categorie": "fausse_refutation",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande, population, intervention, force_de_refutation] : La preuve porte sur les chutes, et non sur les fractures, dans une population plus jeune et non institutionnalisée, avec de la vitamine D3 seule à 2000 UI/j sans calcium.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g057",
+          "type": "refutation",
+          "categorie": "fausse_refutation",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : population, intervention, force_de_refutation] : La population (adultes d'âge moyen en bonne santé vivant en communauté) et l'intervention (D3 2000 UI sans calcium) diffèrent de celles de la question, ce qui empêche une réfutation directe.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g058",
+          "type": "refutation",
+          "categorie": "fausse_refutation",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : population, intervention, force_de_refutation] : La population (sujets âgés vivant à domicile, non carencés) et l'intervention (D3 seule à forte dose) diffèrent de celles du claim, ce qui exclut une réfutation directe.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g059",
+          "type": "refutation",
+          "categorie": "fausse_refutation",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "REJECTED_SEMANTIC"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : mesurande, population, intervention, force_de_refutation] : Le mesurande (fractures vertébrales), la population (adultes sains de 75 ans en moyenne, à domicile, des deux sexes) et l'intervention (2000 UI/j de vitamine D3 sans calcium) diffèrent de ceux du claim.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g060",
+          "type": "refutation",
+          "categorie": "vraie_refutation",
+          "sujet_sensible": false,
+          "ambigu": true,
+          "attendus": [
+            "CONFIRMED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : population, intervention, force_de_refutation] : La population (femmes seules à haut risque) et l'intervention (500 000 UI une fois par an) ne correspondent pas à la QuestionD0, ce qui empêche toute réfutation directe du claim.",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g061",
+          "type": "refutation",
+          "categorie": "vraie_refutation",
+          "sujet_sensible": false,
+          "ambigu": true,
+          "attendus": [
+            "CONFIRMED"
+          ],
+          "obtenu": "REJECTED_SEMANTIC",
+          "motif": "contexte 0 [non conformes : population, intervention, force_de_refutation] : La population (femmes seulement, 70 ans et plus, à haut risque) et l'intervention (500 000 UI une fois par an) ne correspondent pas à la QuestionD0, ce qui empêche une réfutation directe du claim.",
+          "correct": false,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g062",
+          "type": "refutation",
+          "categorie": "vraie_refutation",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "CONFIRMED"
+          ],
+          "obtenu": "CONFIRMED",
+          "motif": "contexte 0 [non conformes : aucun] : L'essai randomisé WHI montre une hausse significative du risque coronarien sous œstrogène plus progestatif oral contre placebo chez des femmes ménopausées américaines, réfutant directement le claim de réduction.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g063",
+          "type": "refutation",
+          "categorie": "vraie_refutation",
+          "sujet_sensible": false,
+          "ambigu": false,
+          "attendus": [
+            "CONFIRMED"
+          ],
+          "obtenu": "CONFIRMED",
+          "motif": "contexte 0 [non conformes : aucun] : L'essai randomisé WHI montre, chez des femmes ménopausées américaines en bonne santé, une augmentation et non une réduction du risque coronarien sous œstrogène plus progestatif oral contre placebo, ce qui réfute directement le claim.",
+          "correct": true,
+          "refus_fournisseur": false
+        },
+        {
+          "cas_id": "g064",
+          "type": "refutation",
+          "categorie": "vraie_refutation",
+          "sujet_sensible": false,
+          "ambigu": true,
+          "attendus": [
+            "CONFIRMED"
+          ],
+          "obtenu": "CONFIRMED",
+          "motif": "contexte 0 [non conformes : aucun] : L'essai ATBC montre, chez des hommes fumeurs de 50 à 69 ans, une hausse significative de 18 % de l'incidence du cancer du poumon sous bêta-carotène contre placebo, ce qui réfute directement le claim protecteur.",
+          "correct": true,
+          "refus_fournisseur": false
+        }
+      ]
+    }
+  }
+}
